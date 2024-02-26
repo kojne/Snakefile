@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+bwa_map        1
+total          1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 26 22:30:31 2024]
+localrule bwa_map:
+    input: data/genome.fa, data/samples/A.fastq
+    output: mapped_reads/A.bam
+    jobid: 0
+    reason: Missing output files: mapped_reads/A.bam
+    resources: tmpdir=/tmp
+
+[Mon Feb 26 22:30:33 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-02-26T223031.766229.snakemake.log

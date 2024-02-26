@@ -1,0 +1,37 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+all               1
+plot_quals        1
+total             2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 26 22:59:04 2024]
+localrule plot_quals:
+    input: calls/all.vcf
+    output: plots/quals.svg
+    jobid: 1
+    reason: Missing output files: plots/quals.svg
+    resources: tmpdir=/tmp
+
+RuleException:
+WorkflowError in file /home/ignasram/Desktop/snakemake-tutorial/Snakefile, line 56:
+Failed to open source file /home/ignasram/Desktop/snakemake-tutorial/scripts/plot-quals.py
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ignasram/Desktop/snakemake-tutorial/scripts/plot-quals.py'
+[Mon Feb 26 22:59:04 2024]
+Error in rule plot_quals:
+    jobid: 1
+    input: calls/all.vcf
+    output: plots/quals.svg
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-26T225904.160498.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
